@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        账号<input type="text" v-model="te">        
+        密码<input type="password" v-model="pwd">
+        <p>账号{{ te }}</p>
+        <p>密码{{ pwd }}</p>
+
+        <input type="checkbox" id="in1" v-model="chec" value="in111">
+        <label for="in1">1</label>
+
+        <input type="checkbox" id="in2" v-model="chec" value="in222">
+        <label for="in2">2</label>
+
+        <p>{{ chec }}</p>
+    </div>
+    <script>
+        let vm = new Vue({
+            el:'#app',
+            data:{
+                te:'',
+                pwd:'',
+                chec:[]
+            }
+        })
+    </script>
+
+
+    
+
+
+</body>
+</html>
